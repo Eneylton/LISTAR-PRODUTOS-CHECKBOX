@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>checkbox</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div *ngIf="cores.length > 0">
+    <ion-item *ngFor="let item of cores">
+      <ion-label>{{item.cor || 'N/A'}}</ion-label>
+      <ion-checkbox color="danger"  (click)="selectCores(item)" [(ngModel)]="item.checked"></ion-checkbox>
+    </ion-item>
+  </div>
+  <button ion-button (click)="cadastrar()">Cadastar</button>
+
+</ion-content>

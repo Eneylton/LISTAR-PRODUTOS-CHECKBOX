@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>checkbox</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div *ngIf="testList.length > 0">
+    <ion-item *ngFor="let member of testList">
+      <ion-label>{{member?.testName || 'N/A'}}</ion-label>
+      <ion-checkbox color="secondary" (click)="selectMember(member)" [(ngModel)]="member.checked"></ion-checkbox>
+    </ion-item>
+  </div>
+  <button ion-button (click)="checkAll()">Cadastrar</button>
+
+</ion-content>

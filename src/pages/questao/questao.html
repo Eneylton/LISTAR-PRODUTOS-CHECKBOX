@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>questao</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-item>
+    <ion-label stacked>Questões</ion-label>
+    <ion-select  (ionChange)="listaRespostas()" [(ngModel)]="questao">
+      <ion-option *ngFor="let item of questoes; first as f" [value]="item.id" [selected]="f">{{item.pergunta}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Respostas</ion-label>
+    <ion-select >
+      <ion-option *ngFor="let res of respostas" >{{res.descricao}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+</ion-content>

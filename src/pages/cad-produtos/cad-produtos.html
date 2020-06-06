@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>cad-produtos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+
+  <ion-title>
+    <input style="width: 100px; " [(colorPicker)]="color" [style.background]="color" [(ngModel)]="color" />
+  </ion-title>
+
+  <button ion-button full color="danger" (click)="exibirCor()" > Cadastrar</button>
+
+</ion-content>
